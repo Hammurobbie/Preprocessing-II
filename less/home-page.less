@@ -1,16 +1,50 @@
 .home {
+  
+  header{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px dashed @navigation-border;
+    justify-content: space-between;
+    padding:3% 12% 3% 12%;
+    align-content: center;
+
+    @media @mobile{
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+  }
 
   .content-section {
-    margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    .margins();
+    .bus{
+      padding-bottom: 3%;
+    }
+    .welcome-p{
+      border-bottom: 2px dashed @navigation-border;
+      padding-bottom: 3%;
+      margin-bottom: 4%;
+    }
     
+    @media @mobile {
+      .header-bottom{
+      width: 100%;
+      margin: 0 10% 0 10%;
+      }
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        margin: 0 10% 0 10%;
+      }
     }
 
     .img-content {
@@ -19,6 +53,15 @@
 
       img {
         border-radius: 10px;
+      }
+
+      .middle-img{
+        margin-bottom: 10%;
+      }
+     
+      @media @mobile {
+        width: 100%;
+        margin: 0 10% 0 10%;
       }
     }
   }
@@ -30,17 +73,29 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        width: 100%;
+        margin: 0 10% 0 10%;
+        padding-right: 20%;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    padding-top: 4%;
+    
 
     img {
       border-radius: 10px;
@@ -52,10 +107,41 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @mobile {
+      flex-direction: column;
+      padding-right: 35%;
+      margin: 0 20% 0 10%;
+
+    }
+    
+    .btn{
+      .custom-btn();
+      .center();
+
+      @media @mobile {
+        width: 100%;
+        background-color:#17A2B8;
+
+        &:hover{
+          background-color: #ffd800;
+          color: #17A2B8;
+        }
+      }
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+        margin: 0 10% 0 10%;
+      }
     }
+    
   }
 }// home
